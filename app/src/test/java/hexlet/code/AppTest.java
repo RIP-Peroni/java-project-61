@@ -3,11 +3,11 @@
  */
 package hexlet.code;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
-        assertEquals(2, 1 + 1);
+        Assertions.assertEquals(2, 1 + 1);
     }
 }

@@ -12,6 +12,7 @@ plugins {
     id 'java'
     id 'se.patrikerdes.use-latest-versions' version '0.2.18'
     id 'com.github.ben-manes.versions' version '0.45.0'
+    id 'checkstyle'
 }
 
 repositories {
@@ -34,7 +35,7 @@ application {
     mainClass = 'hexlet.code.App'
 }
 
-tasks.named('compileJava') {
+compileJava {
     options.release = 17
 }
 
@@ -45,4 +46,8 @@ tasks.named('test') {
 
 tasks.named('run') {
     standardInput = System.in
+}
+
+checkstyle {
+    toolVersion '9.2.1'
 }
