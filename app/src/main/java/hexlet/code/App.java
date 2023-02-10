@@ -3,8 +3,28 @@
  */
 package hexlet.code;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        Cli.greetUser();
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.println("1 - Greet");
+        System.out.println("0 - Exit");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Your choice: ");
+        String userChoice = scanner.next();
+
+        if (userChoice.equals("1")) {
+            Cli.greetUser();
+            scanner.close();
+        } else if (userChoice.equals("2")) {
+            Cli.playEvenGame();
+            scanner.close();
+        } else if (userChoice.equals("0")) {
+            scanner.close();
+        } else {
+            scanner.close();
+        }
     }
 }
