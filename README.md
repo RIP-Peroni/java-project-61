@@ -19,5 +19,5 @@ To play the game:
 2. Choose a game
 3. Enjoy
 
-# How to play:
+## How to play:
 [![asciicast_how-to-play](https://asciinema.org/a/N3zUIKEKZYkK8ClUq5XEODYDL.png)](https://asciinema.org/a/N3zUIKEKZYkK8ClUq5XEODYDL)
