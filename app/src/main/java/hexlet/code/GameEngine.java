@@ -5,6 +5,7 @@ import hexlet.code.game.Game;
 import java.util.Scanner;
 
 public class GameEngine {
+    public static final int COUNT_ROUNDS = 3;
     public static void launchEngine(Game game) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,8 +16,7 @@ public class GameEngine {
 
         System.out.println(game.getDescription());
 
-        int countRounds = 3;
-        for (int i = 0; i < countRounds; i++) {
+        for (int i = 0; i < COUNT_ROUNDS; i++) {
             String question = game.getQuestion();
             String rightAnswer = game.getRightAnswer(question);
 

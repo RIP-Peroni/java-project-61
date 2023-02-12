@@ -4,6 +4,8 @@ import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
 public final class Gcd implements Game {
+    public static final int MIN_RANDOM_NUMBER = 1;
+    public static final int MAX_RANDOM_NUMBER = 100;
     public String getDescription() {
         return "Find the greatest common divisor of given numbers.";
     }
@@ -11,10 +13,8 @@ public final class Gcd implements Game {
         GameEngine.launchEngine(new Gcd());
     }
     public String getQuestion() {
-        int minRandom = 1;
-        int maxRandom = 100;
-        int randomNumber1 = Util.getRandomNumber(minRandom, maxRandom);
-        int randomNumber2 = Util.getRandomNumber(minRandom, maxRandom);
+        int randomNumber1 = Util.getRandomNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+        int randomNumber2 = Util.getRandomNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         return randomNumber1 + " " + randomNumber2;
     }
 

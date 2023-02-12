@@ -4,6 +4,8 @@ import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
 public final class Even implements Game {
+    public static final int MIN_RANDOM_NUMBER = 1;
+    public static final int MAX_RANDOM_NUMBER = 100;
     public String getDescription() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
@@ -11,9 +13,7 @@ public final class Even implements Game {
         GameEngine.launchEngine(new Even());
     }
     public String getQuestion() {
-        int minRandom = 1;
-        int maxRandom = 100;
-        int randomNumber = Util.getRandomNumber(minRandom, maxRandom);
+        int randomNumber = Util.getRandomNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         return String.valueOf(randomNumber);
     }
 

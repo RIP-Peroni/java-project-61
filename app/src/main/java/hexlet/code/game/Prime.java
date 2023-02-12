@@ -4,6 +4,8 @@ import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
 public final class Prime implements Game {
+    public static final int MIN_RANDOM_NUMBER = 1;
+    public static final int MAX_RANDOM_NUMBER = 100;
     public String getDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
@@ -11,8 +13,7 @@ public final class Prime implements Game {
         GameEngine.launchEngine(new Prime());
     }
     public String getQuestion() {
-        int maxRandom = 100;
-        return String.valueOf(Util.getRandomNumber(1, maxRandom));
+        return String.valueOf(Util.getRandomNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER));
     }
 
     public String getRightAnswer(String question) {

@@ -4,7 +4,9 @@ import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
 public final class Calc implements Game {
-    String[] operators = {"+", "-", "*"};
+    private final String[] operators = {"+", "-", "*"};
+    public static final int MIN_RANDOM_NUMBER = 0;
+    public static final int MAX_RANDOM_NUMBER = 100;
     public String getDescription() {
         return "What is the result of the expression?";
     }
@@ -12,10 +14,8 @@ public final class Calc implements Game {
         GameEngine.launchEngine(new Calc());
     }
     public String getQuestion() {
-        int minRandom = 1;
-        int maxRandom = 100;
-        int randomNumber1 = Util.getRandomNumber(minRandom, maxRandom);
-        int randomNumber2 = Util.getRandomNumber(minRandom, maxRandom);
+        int randomNumber1 = Util.getRandomNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+        int randomNumber2 = Util.getRandomNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         String mathSign = operators[Util.getRandomNumber(0, operators.length - 1)];
         return randomNumber1 + " " + mathSign + " " + randomNumber2;
     }
