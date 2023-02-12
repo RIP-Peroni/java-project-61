@@ -5,12 +5,14 @@ package hexlet.code;
 
 import java.util.Scanner;
 import hexlet.code.game.Even;
+import hexlet.code.game.Calc;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
+        System.out.println("3 - Calc");
         System.out.println("0 - Exit");
 
         Scanner scanner = new Scanner(System.in);
@@ -24,6 +26,10 @@ public class App {
             }
             case "2" -> {
                 Even.startGame();
+                scanner.close();
+            }
+            case "3" -> {
+                Calc.startGame();
                 scanner.close();
             }
             default -> scanner.close();

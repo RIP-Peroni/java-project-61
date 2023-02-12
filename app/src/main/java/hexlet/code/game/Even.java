@@ -7,13 +7,13 @@ public class Even implements Game {
     public String getDescription() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
-    public static void startGame() {
+    public static void startGame() throws Exception {
         GameEngine.launchEngine(new Even());
     }
     public String getQuestion() {
         int min = 1;
         int max = 100;
-        int randomNumber = (int) Math.floor(Math.random() * (max - min + 1) + min);
+        int randomNumber = Util.getRandomNumber(min, max);
         return String.valueOf(randomNumber);
     }
 

@@ -5,7 +5,7 @@ import hexlet.code.game.Game;
 import java.util.Scanner;
 
 public class GameEngine {
-    public static void launchEngine(Game game) {
+    public static void launchEngine(Game game) throws Exception {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");
