@@ -18,4 +18,4 @@ run-dist:
 update-deps:
 	./gradlew useLatestVersions
 
-build-run: build run
+build-run: clean build run-dist
