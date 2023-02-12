@@ -3,7 +3,7 @@ package hexlet.code.game;
 import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
-public class Progression implements Game {
+public final class Progression implements Game {
     private int concealedElement;
     public String getDescription() {
         return "What number is missing in the progression?";
@@ -12,11 +12,15 @@ public class Progression implements Game {
         GameEngine.launchEngine(new Progression());
     }
     public String getQuestion() {
-        int elementsCount = Util.getRandomNumber(5, 10);
+        int minLengthOfProgression = 5;
+        int maxLengthOfProgression = 10;
+        int elementsCount = Util.getRandomNumber(minLengthOfProgression, maxLengthOfProgression);
         StringBuilder progression = new StringBuilder(elementsCount);
         int concealedIndex = Util.getRandomNumber(0, elementsCount - 1);
-        int start = Util.getRandomNumber(0, 100);
-        int diff = Util.getRandomNumber(1, 10);
+        int maxRandom = 100;
+        int start = Util.getRandomNumber(0, maxRandom);
+        int maxDiff = 10;
+        int diff = Util.getRandomNumber(1, maxDiff);
         for (int i = 0; i < elementsCount; i++) {
             boolean isConcealed = i == concealedIndex;
             int newElement = start + diff * i;

@@ -3,7 +3,7 @@ package hexlet.code.game;
 import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
-public class Even implements Game {
+public final class Even implements Game {
     public String getDescription() {
         return "Answer 'yes' if the number is even, otherwise answer 'no'.";
     }
@@ -11,9 +11,9 @@ public class Even implements Game {
         GameEngine.launchEngine(new Even());
     }
     public String getQuestion() {
-        int min = 1;
-        int max = 100;
-        int randomNumber = Util.getRandomNumber(min, max);
+        int minRandom = 1;
+        int maxRandom = 100;
+        int randomNumber = Util.getRandomNumber(minRandom, maxRandom);
         return String.valueOf(randomNumber);
     }
 

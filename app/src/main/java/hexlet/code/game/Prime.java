@@ -3,7 +3,7 @@ package hexlet.code.game;
 import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
-public class Prime implements Game {
+public final class Prime implements Game {
     public String getDescription() {
         return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
@@ -11,7 +11,8 @@ public class Prime implements Game {
         GameEngine.launchEngine(new Prime());
     }
     public String getQuestion() {
-        return String.valueOf(Util.getRandomNumber(1, 100));
+        int maxRandom = 100;
+        return String.valueOf(Util.getRandomNumber(1, maxRandom));
     }
 
     public String getRightAnswer(String question) {

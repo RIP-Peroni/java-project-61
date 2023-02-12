@@ -3,7 +3,7 @@ package hexlet.code.game;
 import hexlet.code.GameEngine;
 import hexlet.code.Util;
 
-public class Calc implements Game {
+public final class Calc implements Game {
     String[] operators = {"+", "-", "*"};
     public String getDescription() {
         return "What is the result of the expression?";
@@ -12,10 +12,10 @@ public class Calc implements Game {
         GameEngine.launchEngine(new Calc());
     }
     public String getQuestion() {
-        int min = 1;
-        int max = 100;
-        int randomNumber1 = Util.getRandomNumber(min, max);
-        int randomNumber2 = Util.getRandomNumber(min, max);
+        int minRandom = 1;
+        int maxRandom = 100;
+        int randomNumber1 = Util.getRandomNumber(minRandom, maxRandom);
+        int randomNumber2 = Util.getRandomNumber(minRandom, maxRandom);
         String mathSign = operators[Util.getRandomNumber(0, operators.length - 1)];
         return randomNumber1 + " " + mathSign + " " + randomNumber2;
     }
