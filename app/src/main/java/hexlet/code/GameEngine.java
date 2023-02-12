@@ -9,7 +9,7 @@ public class GameEngine {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name?");
+        System.out.print("May I have your name? ");
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
@@ -21,7 +21,7 @@ public class GameEngine {
             String rightAnswer = game.getRightAnswer(question);
 
             System.out.println("Question: " + question);
-            System.out.print("Your answer:");
+            System.out.print("Your answer: ");
             String answer = scanner.next();
             if (answer.equals(rightAnswer)) {
                 System.out.println("Correct!");
